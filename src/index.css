@@ -1,0 +1,44 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap");
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@reference "tailwindcss";
+
+/* Fontes globais */
+/* body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-serif {
+  font-family: "Libre Baskerville", serif;
+}
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap");
+
+/* TAILWIND (ordem obrigatória) */
+@import "tailwindcss";
+
+/* Fontes globais */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-serif {
+  font-family: "Libre Baskerville", serif;
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease forwards;
+  }
+}
