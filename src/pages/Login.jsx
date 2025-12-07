@@ -69,6 +69,21 @@ export default function Login() {
               placeholder-gray-400"
               />
               {/* Ícone para mostrar/ocultar a senha */}
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)} // Alterna o estado
+                className="absolute cursor-pointer top-5 right-3 transform -translate-y-1/2 text-gray-500"
+              >
+                {showPassword ? (
+                  <span role="img" aria-label="Ocultar senha">
+                    🙈
+                  </span> // Ícone para ocultar
+                ) : (
+                  <span role="img" aria-label="Mostrar senha">
+                    👁️
+                  </span> // Ícone para mostrar
+                )}
+              </button>
             </div>
           </div>
 
@@ -84,10 +99,7 @@ export default function Login() {
         {/* LINK */}
         <p className="text-center text-sm text-gray-700 mt-5">
           Não tem conta?{" "}
-          <Link
-            to="/register"
-            className="font-medium hover:underline"
-          >
+          <Link to="/register" className="font-medium hover:underline">
             Registrar
           </Link>
         </p>

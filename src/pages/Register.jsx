@@ -214,6 +214,21 @@ export default function Register() {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full border border-gray-300 px-3 py-2 rounded-lg placeholder-gray-400 focus:ring-2 focus:ring-[#3A5A40] focus:border-[#3A5A40] outline-none transition"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)} // Alterna o estado
+                className="absolute cursor-pointer top-5 right-3 transform -translate-y-1/2 text-gray-500"
+              >
+                {showPassword ? (
+                  <span role="img" aria-label="Ocultar senha">
+                    🙈
+                  </span> // Ícone para ocultar
+                ) : (
+                  <span role="img" aria-label="Mostrar senha">
+                    👁️
+                  </span> // Ícone para mostrar
+                )}
+              </button>
             </div>
           </div>
 
@@ -229,10 +244,7 @@ export default function Register() {
         {/* Link para login */}
         <p className="text-center text-sm text-gray-700 mt-5">
           Já tem conta?{" "}
-          <Link
-            to="/login"
-            className="font-medium hover:underline"
-          >
+          <Link to="/login" className="font-medium hover:underline">
             Entrar
           </Link>
         </p>
