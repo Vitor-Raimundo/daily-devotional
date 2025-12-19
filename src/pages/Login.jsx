@@ -22,10 +22,20 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#F7F5EF] px-4">
+      {/* Ícone + título global */}
+      <div className="mb-8 text-center opacity-0 animate-fadeIn">
+        <div className="text-5xl mb-2">📖</div>
+        <h1 className="text-3xl font-serif text-[#3A5A40]">
+          Leitura Devocional
+        </h1>
+      </div>
+
       {/* CARD */}
-      <div className="w-full max-w-88 bg-white">
-        <h2 className="text-xl font-serif text-center mb-6">Login</h2>
+      <div className="w-full max-w-88 bg-white p-8 rounded-2xl shadow-md border border-[#E6E4DE] opacity-0 animate-fadeIn">
+        <h2 className="text-xl font-serif text-[#3A5A40] text-center mb-6">
+          Entrar
+        </h2>
 
         {/* ERRO */}
         {error && (
@@ -49,7 +59,8 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full border border-gray-300 px-3 py-2 rounded-lg 
-              placeholder-gray-400"
+              placeholder-gray-400
+              focus:ring-2 focus:ring-[#3A5A40] focus:border-[#3A5A40] outline-none transition"
             />
           </div>
 
@@ -66,7 +77,8 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full border border-gray-300 px-3 py-2 rounded-lg 
-              placeholder-gray-400"
+              placeholder-gray-400
+              focus:ring-2 focus:ring-[#3A5A40] focus:border-[#3A5A40] outline-none transition"
               />
               {/* Ícone para mostrar/ocultar a senha */}
               <button
@@ -90,7 +102,7 @@ export default function Login() {
           {/* BOTÃO */}
           <button
             type="submit"
-            className="cursor-pointer w-full bg-gray-200 py-2 rounded-xl font-medium"
+            className="cursor-pointer w-full bg-[#3A5A40] text-white py-2 rounded-xl font-medium hover:bg-[#2F4A33] transition"
           >
             Entrar
           </button>
@@ -99,7 +111,10 @@ export default function Login() {
         {/* LINK */}
         <p className="text-center text-sm text-gray-700 mt-5">
           Não tem conta?{" "}
-          <Link to="/register" className="font-medium hover:underline">
+          <Link
+            to="/register"
+            className="text-[#3A5A40] font-medium hover:underline"
+          >
             Registrar
           </Link>
         </p>

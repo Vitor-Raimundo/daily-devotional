@@ -38,27 +38,31 @@ export default function Home() {
   }, [user]);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-[#F7F5EF] text-[#3D3D3D] relative">
       {/* Header */}
-      <header className="bg-white shadow-sm px-6 flex justify-end items-center">
-        <nav className="flex items-center gap-">
+      <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-serif text-[#3A5A40]">
+          Leitura Devocional 🙏
+        </h1>
+
+        <nav className="flex items-center gap-4">
           <button
             onClick={() => setOpenCreateDrawer(true)}
-            className="text-sm p-3 hover:underline"
+            className="text-sm text-[#3A5A40] hover:underline"
           >
             Criar grupo
           </button>
 
           <button
             onClick={() => setOpenJoinDrawer(true)}
-            className="text-sm p-3 hover:underline"
+            className="text-sm text-[#3A5A40] hover:underline"
           >
             Entrar em grupo
           </button>
 
           <button
             onClick={logout}
-            className="text-sm p-3 text-red-500 hover:underline"
+            className="text-sm text-red-500 hover:underline"
           >
             Sair
           </button>
@@ -67,13 +71,15 @@ export default function Home() {
 
       {/* Main */}
       <main className="max-w-3xl mx-auto px-4 py-10">
-        <h2 className="text-2xl font-serif mb-6">
+        <h2 className="text-2xl font-serif text-[#3A5A40] mb-6">
           Bem-vindo, {user?.email} 🌿
         </h2>
 
         {/* Meus grupos */}
         <section>
-          <h3 className="text-xl font-serif">Meus grupos</h3>
+          <h3 className="text-xl font-serif text-[#3A5A40] mb-3">
+            Meus grupos
+          </h3>
 
           {groups.length === 0 ? (
             <p className="text-gray-600">
@@ -84,16 +90,20 @@ export default function Home() {
               {groups.map((group) => (
                 <div
                   key={group.id}
-                  className="bg-white p-5 shadow-sm flex justify-between items-center"
+                  className="bg-white p-5 rounded-xl border border-[#E6E4DE] shadow-sm flex justify-between items-center"
                 >
                   <div>
-                    <p className="text-lg font-medium">{group.name}</p>
-                    <p className="text-sm">{group.description}</p>
+                    <p className="text-lg font-medium text-[#3A5A40]">
+                      {group.name}
+                    </p>
+                    <p className="text-sm text-[#3D3D3D]/70">
+                      {group.description}
+                    </p>
                   </div>
 
                   <Link
                     to={`/group/${group.id}`}
-                    className="font-medium hover:underline"
+                    className="text-[#3A5A40] font-medium hover:underline"
                   >
                     Abrir →
                   </Link>
