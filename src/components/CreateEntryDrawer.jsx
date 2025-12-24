@@ -50,9 +50,12 @@ export default function CreateEntryDrawer({ open, onClose, groupId }) {
         `}
       >
         <div className="flex justify-between items-center px-5 py-4 border-b">
-          <h2 className="text-lg font-serif">Novo Devocional</h2>
+          <h2 className="text-lg font-serif text-[#3A5A40]">Novo Devocional</h2>
 
-          <button onClick={onClose} className="text-2xl">
+          <button
+            onClick={onClose}
+            className="text-2xl text-[#3A5A40] hover:text-[#2F4A33] cursor-pointer"
+          >
             ×
           </button>
         </div>
@@ -62,7 +65,9 @@ export default function CreateEntryDrawer({ open, onClose, groupId }) {
             {error && <p className="text-red-500 text-sm">{error}</p>}
 
             <div>
-              <label className="block text-sm mb-1">Título</label>
+              <label className="block text-sm mb-1 text-[#3A5A40]">
+                Título
+              </label>
               <input
                 type="text"
                 value={title}
@@ -73,7 +78,7 @@ export default function CreateEntryDrawer({ open, onClose, groupId }) {
             </div>
 
             <div>
-              <label className="block text-sm mb-1">
+              <label className="block text-sm mb-1 text-[#3A5A40]">
                 Referência Bíblica (opcional)
               </label>
               <input
@@ -86,7 +91,9 @@ export default function CreateEntryDrawer({ open, onClose, groupId }) {
             </div>
 
             <div>
-              <label className="block text-sm mb-1 ">Texto / Anotação</label>
+              <label className="block text-sm mb-1 text-[#3A5A40]">
+                Texto / Anotação
+              </label>
               <textarea
                 rows="5"
                 value={text}
@@ -96,7 +103,10 @@ export default function CreateEntryDrawer({ open, onClose, groupId }) {
               ></textarea>
             </div>
 
-            <button type="submit" className="bg-gray-200 px-4 py-2 rounded-md w-full">
+            <button
+              type="submit"
+              className="bg-[#3A5A40] text-white px-4 py-2 rounded-md w-full hover:bg-[#2F4A33] transition cursor-pointer"
+            >
               Criar
             </button>
           </form>

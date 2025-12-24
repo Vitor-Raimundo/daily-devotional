@@ -45,7 +45,10 @@ export default function CreateDrawer({ open, onClose }) {
   return (
     <>
       {open && (
-        <div onClick={onClose} className="fixed inset-0 bg-black/40 z-40"></div>
+        <div
+          onClick={onClose}
+          className="fixed inset-0 bg-black/40 z-40"
+        ></div>
       )}
 
       <div
@@ -57,9 +60,14 @@ export default function CreateDrawer({ open, onClose }) {
         `}
       >
         <div className="flex justify-between items-center px-5 py-4 border-b">
-          <h2 className="text-lg font-serif ">Criar novo grupo</h2>
+          <h2 className="text-lg font-serif text-[#3A5A40]">
+            Criar novo grupo
+          </h2>
 
-          <button onClick={onClose} className="text-2xl ">
+          <button
+            onClick={onClose}
+            className="text-2xl text-[#3A5A40] hover:text-[#2F4A33]"
+          >
             ×
           </button>
         </div>
@@ -69,7 +77,9 @@ export default function CreateDrawer({ open, onClose }) {
             {error && <p className="text-red-500 text-sm">{error}</p>}
 
             <div>
-              <label className="block text-sm mb-1 ">Nome do grupo</label>
+              <label className="block text-sm mb-1 text-[#3A5A40]">
+                Nome do grupo
+              </label>
               <input
                 type="text"
                 value={groupName}
@@ -80,7 +90,9 @@ export default function CreateDrawer({ open, onClose }) {
             </div>
 
             <div>
-              <label className="block text-sm mb-1 ">Descrição</label>
+              <label className="block text-sm mb-1 text-[#3A5A40]">
+                Descrição
+              </label>
               <textarea
                 rows="3"
                 value={description}
@@ -92,7 +104,7 @@ export default function CreateDrawer({ open, onClose }) {
 
             <button
               type="submit"
-              className=" text-black px-4 py-2 rounded-md w-full bg-gray-200 transition"
+              className="bg-[#3A5A40] text-white px-4 py-2 rounded-md w-full hover:bg-[#2F4A33] transition"
             >
               Criar grupo
             </button>

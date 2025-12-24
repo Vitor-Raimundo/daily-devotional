@@ -48,21 +48,21 @@ export default function Home() {
         <nav className="flex items-center gap-4">
           <button
             onClick={() => setOpenCreateDrawer(true)}
-            className="text-sm text-[#3A5A40] hover:underline"
+            className="text-sm text-[#3A5A40] hover:underline cursor-pointer"
           >
             Criar grupo
           </button>
 
           <button
             onClick={() => setOpenJoinDrawer(true)}
-            className="text-sm text-[#3A5A40] hover:underline"
+            className="text-sm text-[#3A5A40] hover:underline cursor-pointer"
           >
             Entrar em grupo
           </button>
 
           <button
             onClick={logout}
-            className="text-sm text-red-500 hover:underline"
+            className="text-sm text-red-500 hover:underline cursor-pointer"
           >
             Sair
           </button>

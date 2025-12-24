@@ -71,13 +71,13 @@ export default function JoinDrawer({ open, onClose }) {
         `}
       >
         <div className="flex justify-between items-center px-5 py-4 border-b">
-          <h2 className="text-lg font-serif">
+          <h2 className="text-lg font-serif text-[#3A5A40]">
             Entrar em um grupo
           </h2>
 
           <button
             onClick={onClose}
-            className="text-2xl"
+            className="text-2xl text-[#3A5A40] hover:text-[#2F4A33]"
           >
             ×
           </button>
@@ -87,11 +87,11 @@ export default function JoinDrawer({ open, onClose }) {
           <form onSubmit={handleJoinGroup} className="space-y-4">
             {error && <p className="text-red-500 text-sm">{error}</p>}
             {success && (
-              <p className="text-sm font-medium">{success}</p>
+              <p className="text-green-600 text-sm font-medium">{success}</p>
             )}
 
             <div>
-              <label className="block text-sm mb-1">
+              <label className="block text-sm mb-1 text-[#3A5A40]">
                 Código do grupo
               </label>
               <input
@@ -105,7 +105,7 @@ export default function JoinDrawer({ open, onClose }) {
 
             <button
               type="submit"
-              className="bg-gray-200 px-4 py-2 rounded-md w-full transition"
+              className="bg-[#3A5A40] text-white px-4 py-2 rounded-md w-full hover:bg-[#2F4A33] transition"
             >
               Entrar no grupo
             </button>
